@@ -31,11 +31,11 @@ module baseplate() {
       cube(size = [ plate_width, plate_height, PANEL_DEPTH ], center = true);
       }
     // Cut holes for the bolts
-    translate(v = [ -((plate_width / 2) - (1.5 * BOLT_SIZE)), 0, 0 ]) {
-      cylinder(h = PANEL_DEPTH * 4, r = BOLT_SIZE / 2, center = true, $fs = RESOLUTION);
+    translate(v = [ -((plate_width / 2) - (1.5 * BOLT_SIZE)), 0, PANEL_DEPTH ]) {
+      hexnut4_negative(spindle = 3 * PANEL_DEPTH);
       }
-    translate(v = [ (plate_width / 2) - (1.5 * BOLT_SIZE), 0, 0 ]) {
-      cylinder(h = PANEL_DEPTH * 4, r = BOLT_SIZE / 2, center = true, $fs = RESOLUTION);
+    translate(v = [ (plate_width / 2) - (1.5 * BOLT_SIZE), 0, PANEL_DEPTH ]) {
+      hexnut4_negative(spindle = 3 * PANEL_DEPTH);
       }
     }
   }

@@ -14,14 +14,15 @@ RESOLUTION  = 0.1; // Resolution of your printer
 
 PANEL_DEPTH = 3.0; // The prefered size of any shell material
 
-BOLT_SIZE = 4.0; // Diameter of connecting bolts (M4)
+BOLT_SIZE = 4.2; // Diameter of connecting bolts (M4)
 
 BED_TO_MOUNT = 15.0;
 
-GUIDE_ROD_DIAMETER = 12.00;
+GUIDE_ROD_DIAMETER = 12.50;
 
-BEARING_DIAMETER = 22.00;
-BEARING_HEIGHT   = 7.00;
+BEARING_DIAMETER       = 22.00;
+BEARING_INNER_DIAMETER = 14.00;
+BEARING_HEIGHT         = 7.00;
 
 //---------------------------------------------------------------------------
 // Nuts
@@ -37,6 +38,10 @@ BEARING_HEIGHT   = 7.00;
 NUT_OUTER_DIAMETER = 13.00;
 NUT_INNER_DIAMETER = 8.50;  // Enough room for the bore and thread
 NUT_HEIGHT         = 6;
+
+NUT4_OUTER_DIAMETER = 5.5;
+NUT4_INNER_DIAMETER = 4.0;
+NUT4_HEIGHT         = 2.5;
 
 /** Create a hexagon.
  *
@@ -81,3 +86,16 @@ module hexnut_negative(depth = NUT_HEIGHT, spindle = NUT_HEIGHT) {
     cylinder(h = max(2 * depth, spindle), r = NUT_INNER_DIAMETER / 2, center = true, $fs = RESOLUTION);
     }
   }
+
+/** Create a negative hex nut object
+ *
+ * This function creates a hex nut (centered on the origin) that can be subtracted
+ * from another shape to allow a hole for the nut to fit into.
+ */
+module hexnut4_negative(depth = NUT4_HEIGHT, spindle = NUT4_HEIGHT) {
+  union() {
+    hexagon(NUT4_OUTER_DIAMETER / 2, depth);
+    cylinder(h = max(2 * depth, spindle), r = NUT4_INNER_DIAMETER / 2, center = true, $fs = RESOLUTION);
+    }
+  }
+
