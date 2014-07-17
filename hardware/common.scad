@@ -22,9 +22,11 @@ BEARING_DIAMETER       = 22.00;
 BEARING_INNER_DIAMETER = 14.00;
 BEARING_HEIGHT         = 7.00;
 
-MOTOR_DEPTH  = 43;
-MOTOR_WIDTH  = 43;
-MOTOR_HEIGHT = 40;
+MOTOR_DEPTH          = 43;
+MOTOR_WIDTH          = 43;
+MOTOR_HEIGHT         = 40;
+MOTOR_SHAFT_DIAMETER = 5.00;
+MOTOR_SHAFT_LENGTH   = 25.00;
 
 BED_TO_MOUNT = PANEL_DEPTH + (MOTOR_DEPTH / 2);
 
@@ -102,4 +104,12 @@ module hexnut4_negative(depth = NUT4_HEIGHT, spindle = NUT4_HEIGHT) {
     cylinder(h = max(2 * depth, spindle), r = NUT4_INNER_DIAMETER / 2, center = true, $fs = RESOLUTION);
     }
   }
+
+//---------------------------------------------------------------------------
+// Sizing for the stepper to rod link component. Needed as common because a
+// couple of components require it to determine their sizing
+//---------------------------------------------------------------------------
+
+LINK_DIAMETER = NUT_OUTER_DIAMETER * 2;
+LINK_LENGTH   = MOTOR_SHAFT_LENGTH + (3 * NUT_HEIGHT);
 
