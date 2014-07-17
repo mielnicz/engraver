@@ -16,13 +16,17 @@ PANEL_DEPTH = 3.0; // The prefered size of any shell material
 
 BOLT_SIZE = 4.2; // Diameter of connecting bolts (M4)
 
-BED_TO_MOUNT = 15.0;
-
 GUIDE_ROD_DIAMETER = 12.50;
 
 BEARING_DIAMETER       = 22.00;
 BEARING_INNER_DIAMETER = 14.00;
 BEARING_HEIGHT         = 7.00;
+
+MOTOR_DEPTH  = 43;
+MOTOR_WIDTH  = 43;
+MOTOR_HEIGHT = 40;
+
+BED_TO_MOUNT = PANEL_DEPTH + (MOTOR_DEPTH / 2);
 
 //---------------------------------------------------------------------------
 // Nuts
@@ -39,9 +43,9 @@ NUT_OUTER_DIAMETER = 13.00;
 NUT_INNER_DIAMETER = 8.50;  // Enough room for the bore and thread
 NUT_HEIGHT         = 6;
 
-NUT4_OUTER_DIAMETER = 5.5;
-NUT4_INNER_DIAMETER = 4.0;
-NUT4_HEIGHT         = 2.5;
+NUT4_OUTER_DIAMETER = 8.5;
+NUT4_INNER_DIAMETER = 4.5;
+NUT4_HEIGHT         = 4.0;
 
 /** Create a hexagon.
  *
