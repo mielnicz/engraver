@@ -74,12 +74,12 @@ module stem() {
 // Main shape
 //---------------------------------------------------------------------------
 
-//translate(v = [ 0, 0, STEM_HEIGHT / 2 ]) {
-//  rotate(a = [ 90, 0, 0 ]) {
+translate(v = [ 0, 0, STEM_HEIGHT / 2 ]) {
+  rotate(a = [ 90, 0, 0 ]) {
     union() {
       baseplate();
       stem();
       }
-//    }
-//  }
+    }
+  }
 
