@@ -18,9 +18,27 @@ BOLT_SIZE = 4.5; // Diameter of connecting bolts (M4)
 
 GUIDE_ROD_DIAMETER = 12.50;
 
+//---------------------------------------------------------------------------
+// Limit switch dimensions (using Jaycar components)
+//---------------------------------------------------------------------------
+
+LIMIT_SWITCH_WIDTH   = 6.00;
+LIMIT_SWITCH_HEIGHT  = 6.00;
+LIMIT_SWITCH_DEPTH   = 13.00;
+LIMIT_SWITCH_SWITCH  = 18.00; // Depth that the switch extends to
+LIMIT_SWITCH_TRIGGER = 12.00; // Height at which the switch starts to trigger
+
+//---------------------------------------------------------------------------
+// Bearing dimensions (using a 608 ball bearing - available from skate shops)
+//---------------------------------------------------------------------------
+
 BEARING_DIAMETER       = 22.00;
 BEARING_INNER_DIAMETER = 14.00;
 BEARING_HEIGHT         = 7.00;
+
+//---------------------------------------------------------------------------
+// Stepper motor dimensions
+//---------------------------------------------------------------------------
 
 MOTOR_DEPTH          = 43;
 MOTOR_WIDTH          = 43;
@@ -28,8 +46,6 @@ MOTOR_HEIGHT         = 40;
 MOTOR_SHAFT_DIAMETER = 5.00;
 MOTOR_SHAFT_LENGTH   = 25.00;
 MOTOR_SHAFT_BOUNDARY = 22.00;
-
-BED_TO_MOUNT = PANEL_DEPTH + (MOTOR_DEPTH / 2);
 
 //---------------------------------------------------------------------------
 // Nuts
@@ -105,6 +121,11 @@ module hexnut4_negative(depth = NUT4_HEIGHT, spindle = NUT4_HEIGHT) {
     cylinder(h = max(2 * depth, spindle), r = NUT4_INNER_DIAMETER / 2, center = true, $fs = RESOLUTION);
     }
   }
+
+//--- Distance from bed (or base) to the center point of the threaded rod and
+//    guide rods.
+
+BED_TO_MOUNT = PANEL_DEPTH + (MOTOR_DEPTH / 2);
 
 //---------------------------------------------------------------------------
 // Sizing for the stepper to rod link component. Needed as common because a
