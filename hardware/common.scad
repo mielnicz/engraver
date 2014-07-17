@@ -12,9 +12,9 @@
 
 RESOLUTION  = 0.1; // Resolution of your printer
 
-PANEL_DEPTH = 3.0; // The prefered size of any shell material
+PANEL_DEPTH = 4.0; // The prefered size of any shell material
 
-BOLT_SIZE = 4.2; // Diameter of connecting bolts (M4)
+BOLT_SIZE = 4.5; // Diameter of connecting bolts (M4)
 
 GUIDE_ROD_DIAMETER = 12.50;
 
