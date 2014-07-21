@@ -7,10 +7,13 @@
 *--------------------------------------------------------------------------*/
 include <common.scad>;
 
+// All more room for slippage and misalignment
+GUIDE_ROD_DIAM2 = GUIDE_ROD_DIAMETER + 1.5;
+
 //--- Common definitions
 STEM_WIDTH  = GUIDE_ROD_DIAMETER * 2; // Width (in X) of the stem
 STEM_HEIGHT = GUIDE_ROD_DIAMETER * 2; // Height (in Y) of the stem
-STEM_DEPTH  = BED_TO_MOUNT + GUIDE_ROD_DIAMETER + PANEL_DEPTH;
+STEM_DEPTH  = BED_TO_MOUNT + GUIDE_ROD_DIAM2 + PANEL_DEPTH;
 
 //---------------------------------------------------------------------------
 // Helper modules
@@ -56,7 +59,7 @@ module stem() {
     // Take away the hole for the rod
     translate(v = [ 0, 0, BED_TO_MOUNT ]) {
       rotate(a = [ 90, 0, 0 ]) {
-        cylinder(h = STEM_WIDTH * 2, r = GUIDE_ROD_DIAMETER / 2, center = true, $fs = RESOLUTION);
+        cylinder(h = STEM_WIDTH * 2, r = GUIDE_ROD_DIAM2 / 2, center = true, $fs = RESOLUTION);
         }
       }
     }
