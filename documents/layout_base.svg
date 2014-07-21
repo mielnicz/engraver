@@ -14,7 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="layout_base.svg">
+   sodipodi:docname="layout_base.svg"
+   inkscape:export-filename="/home/shane/Sandbox/quickies/pcbetch/documents/layout_base.png"
+   inkscape:export-xdpi="68.417511"
+   inkscape:export-ydpi="68.417511">
   <defs
      id="defs4">
     <marker
@@ -126,7 +129,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -360,25 +363,25 @@
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="850.54846"
+       x="830.3454"
        y="537.18439"
        id="text4648"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4650"
-         x="850.54846"
-         y="537.18439">10cm</tspan></text>
+         x="830.3454"
+         y="537.18439"
+         id="tspan4887">7.5cm</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="848.52814"
-       y="800.83417"
+       x="830.3454"
+       y="799.82404"
        id="text4652"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4654"
-         x="848.52814"
-         y="800.83417">10cm</tspan></text>
+         x="830.3454"
+         y="799.82404">7.5cm</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#e30000;fill-opacity:1;stroke:none;font-family:Sans"
